@@ -1,0 +1,131 @@
+{
+  "configVersion": 1,
+  "timestamp": 1621010195164,
+  "index": "/verax-web/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/verax-web/favicon.ico",
+        "/verax-web/index.html",
+        "/verax-web/main.dcfd11bb90ad7136b569.js",
+        "/verax-web/manifest.webmanifest",
+        "/verax-web/polyfills.00096ed7d93ed26ee6df.js",
+        "/verax-web/runtime.7b63b9fd40098a2e8207.js",
+        "/verax-web/styles.3ff695c00d717f2d2a11.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/verax-web/assets/css/aos.css",
+        "/verax-web/assets/css/fonts.css",
+        "/verax-web/assets/css/mini-default.min.css",
+        "/verax-web/assets/css/style.css",
+        "/verax-web/assets/css/web.css",
+        "/verax-web/assets/fonts/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNq7lujVj9_mf.woff2",
+        "/verax-web/assets/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwmBdu3cOWxy40.woff2",
+        "/verax-web/assets/fonts/material-icons.woff2",
+        "/verax-web/assets/icon/logo.png",
+        "/verax-web/assets/icons/icon-128x128.png",
+        "/verax-web/assets/icons/icon-144x144.png",
+        "/verax-web/assets/icons/icon-152x152.png",
+        "/verax-web/assets/icons/icon-192x192.png",
+        "/verax-web/assets/icons/icon-384x384.png",
+        "/verax-web/assets/icons/icon-512x512.png",
+        "/verax-web/assets/icons/icon-72x72.png",
+        "/verax-web/assets/icons/icon-96x96.png",
+        "/verax-web/assets/img/AndroidPNG.png",
+        "/verax-web/assets/img/MobileApp.png",
+        "/verax-web/assets/img/balloons-ceks.png",
+        "/verax-web/assets/img/balloons.png",
+        "/verax-web/assets/img/balloons.svg",
+        "/verax-web/assets/img/bg.png",
+        "/verax-web/assets/img/girl.png",
+        "/verax-web/assets/img/girl.svg",
+        "/verax-web/assets/img/iosPNG.png",
+        "/verax-web/assets/img/learn.png",
+        "/verax-web/assets/img/movie.png",
+        "/verax-web/assets/img/next.png",
+        "/verax-web/assets/img/videocall.png",
+        "/verax-web/assets/js/aos.js",
+        "/verax-web/assets/js/isMobile.min.js",
+        "/verax-web/assets/js/service-worker.js"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/verax-web/assets/css/aos.css": "55bc3920dab98bf988d93eb7e461e05d94186504",
+    "/verax-web/assets/css/fonts.css": "4bf2be7d053609913a729fdf28fb7a861c586c83",
+    "/verax-web/assets/css/mini-default.min.css": "8bea8862ce648c7ef73aa53fc8126e6b7336e5bd",
+    "/verax-web/assets/css/style.css": "58d05063a4942848df07feccae3792d35e73101b",
+    "/verax-web/assets/css/web.css": "ea9a45acc4fc2b57b4e8d4e7fc98c28c249c8e2c",
+    "/verax-web/assets/fonts/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNq7lujVj9_mf.woff2": "c08fee810c7fe46c12a02f8856cf4e4b9c2385af",
+    "/verax-web/assets/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwmBdu3cOWxy40.woff2": "848d456cfac99ecc0390f6f4d7f3764cf17e6a21",
+    "/verax-web/assets/fonts/material-icons.woff2": "2e58cd7c0248dc123f9acfd806d26954dc2314ee",
+    "/verax-web/assets/icon/logo.png": "7eb50078e5585b84130920fd800390afcd6de9d8",
+    "/verax-web/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/verax-web/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/verax-web/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/verax-web/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/verax-web/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/verax-web/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/verax-web/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/verax-web/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/verax-web/assets/img/AndroidPNG.png": "cbd2cb606177077520466abf02774eb3ec3f6016",
+    "/verax-web/assets/img/MobileApp.png": "974758a669a3719f9105625ff3dbea4e62612660",
+    "/verax-web/assets/img/balloons-ceks.png": "0ef7fc7ac94df8cbe8e8ee843b603f11ea12cbcd",
+    "/verax-web/assets/img/balloons.png": "0ef7fc7ac94df8cbe8e8ee843b603f11ea12cbcd",
+    "/verax-web/assets/img/balloons.svg": "6a2bc25839ec2ed63a6b4d3e81ce24030e1ae215",
+    "/verax-web/assets/img/bg.png": "d987d91d0b8e295ce6baa1423630a98a238603a6",
+    "/verax-web/assets/img/girl.png": "97271cead2d0d692c75e3c486b97e9b02a5c1e5d",
+    "/verax-web/assets/img/girl.svg": "d1ee42d31d15f7011cf92f2cc9f2b97feece15e2",
+    "/verax-web/assets/img/iosPNG.png": "18600931beaa268fff994d4f75d41910a33f4cc6",
+    "/verax-web/assets/img/learn.png": "99f7cfc21787be38431924f29d66e46c83715c48",
+    "/verax-web/assets/img/movie.png": "5bba1358a7c3a6155166c1671abe3492e639198c",
+    "/verax-web/assets/img/next.png": "288ca78d685fc71f630fc81bf896468174cfa125",
+    "/verax-web/assets/img/videocall.png": "86028b4e2bb0de93ccddc4eb654d10d7d301a96e",
+    "/verax-web/assets/js/aos.js": "c14ff85558c9a064a80da086ddaf059d87a94b3d",
+    "/verax-web/assets/js/isMobile.min.js": "21a1301ac7f0c72032b471a80eb8125509b70961",
+    "/verax-web/assets/js/service-worker.js": "ad446faee1849eec3742964446f7e8256c61250e",
+    "/verax-web/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/verax-web/index.html": "187d4682804fc7c307746b46c3c0b00093bfd72a",
+    "/verax-web/main.dcfd11bb90ad7136b569.js": "e557f299f9f2d91ccd591f576e5a8c21198ccbff",
+    "/verax-web/manifest.webmanifest": "a4a7c74c29b5ae65d3f888e5e5805a50157cf4e8",
+    "/verax-web/polyfills.00096ed7d93ed26ee6df.js": "cfe7b0b53e96bff9ba384b4d497c08475a617d62",
+    "/verax-web/runtime.7b63b9fd40098a2e8207.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/verax-web/styles.3ff695c00d717f2d2a11.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
