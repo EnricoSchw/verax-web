@@ -1,0 +1,68 @@
+
+
+<div class="shape">
+</div>
+
+<mat-toolbar class="app-nav">
+  <span>Coorax</span>
+</mat-toolbar>
+
+
+<div class="app-content">
+
+  <div class="app-content-two-section">
+    <h1 class="mat-h1">Add Profile</h1>
+    <p>Before you can start, please add a Profile!
+    Your profile will only be saved on this device. <span>Only you allone have access</span> to this data.
+    We don't save any data on servers.</p>
+    <span matTooltip="The Public-Name is your public shown name. You can change this name when ever you want.
+    The User-Name is your unique identifier name. You can not change this name."><mat-icon  class="custom-tooltip" >help</mat-icon></span>
+    <form class="start-form" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <mat-label>Public Name</mat-label>
+        <input matInput placeholder="Please add a public name..." formControlName="publicName" [errorStateMatcher]="matcher">
+        <mat-error *ngIf="publicNameFormControl.hasError('minlength') && !publicNameFormControl.hasError('pattern') && !publicNameFormControl.hasError('required')">
+          Must have min 5 characters.
+        </mat-error>
+        <mat-error *ngIf="publicNameFormControl.hasError('maxlength') && !publicNameFormControl.hasError('pattern') && !publicNameFormControl.hasError('required')">
+          Maximal 25 characters allowed.
+        </mat-error>
+        <mat-error *ngIf="publicNameFormControl.hasError('pattern') && !publicNameFormControl.hasError('required')">
+          Only letters, space and numbers.
+        </mat-error>
+
+        <mat-error *ngIf="publicNameFormControl.hasError('required')">
+          Public Name is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+
+      <mat-form-field>
+        <mat-label>User Name</mat-label>
+          <input matInput  placeholder="Please add an user name..." [formControl]="userNameFormControl" [errorStateMatcher]="matcher">
+        <mat-error *ngIf="userNameFormControl.hasError('minlength') && !userNameFormControl.hasError('pattern') && !publicNameFormControl.hasError('required')">
+          Must have min 5 characters.
+        </mat-error>
+        <mat-error *ngIf="userNameFormControl.hasError('maxlength') && !userNameFormControl.hasError('pattern') && !publicNameFormControl.hasError('required')">
+          Maximal 25 characters allowed.
+        </mat-error>
+        <mat-error *ngIf="userNameFormControl.hasError('pattern') && !userNameFormControl.hasError('required')">
+          Only letters, space and numbers.
+        </mat-error>
+
+        <mat-error *ngIf="userNameFormControl.hasError('required')">
+          User Name is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" class="shape-button-desktop" type="submit"  >Save</button>
+
+      <button mat-fab color="accent" class="shape-button" aria-label="save" type="submit">
+        <mat-icon>save</mat-icon>
+      </button>
+    </form>
+  </div>
+  <div class="app-content-two-section">
+    <img src="./assets/img/girl.png">
+  </div>
+</div>
