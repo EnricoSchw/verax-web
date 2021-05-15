@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1621010195164,
+  "timestamp": 1621096718389,
   "index": "/verax-web/index.html",
   "assetGroups": [
     {
@@ -13,11 +13,11 @@
       "urls": [
         "/verax-web/favicon.ico",
         "/verax-web/index.html",
-        "/verax-web/main.dcfd11bb90ad7136b569.js",
+        "/verax-web/main.f88dba3f84bfe77747f0.js",
         "/verax-web/manifest.webmanifest",
         "/verax-web/polyfills.00096ed7d93ed26ee6df.js",
         "/verax-web/runtime.7b63b9fd40098a2e8207.js",
-        "/verax-web/styles.3ff695c00d717f2d2a11.css"
+        "/verax-web/styles.d3bf107e61ce096c6c9b.css"
       ],
       "patterns": []
     },
@@ -91,7 +91,7 @@
     "/verax-web/assets/img/balloons.png": "0ef7fc7ac94df8cbe8e8ee843b603f11ea12cbcd",
     "/verax-web/assets/img/balloons.svg": "6a2bc25839ec2ed63a6b4d3e81ce24030e1ae215",
     "/verax-web/assets/img/bg.png": "d987d91d0b8e295ce6baa1423630a98a238603a6",
-    "/verax-web/assets/img/girl.png": "97271cead2d0d692c75e3c486b97e9b02a5c1e5d",
+    "/verax-web/assets/img/girl.png": "51fa1b9cd3852d0428adcf1347ed4b9fe2791b74",
     "/verax-web/assets/img/girl.svg": "d1ee42d31d15f7011cf92f2cc9f2b97feece15e2",
     "/verax-web/assets/img/iosPNG.png": "18600931beaa268fff994d4f75d41910a33f4cc6",
     "/verax-web/assets/img/learn.png": "99f7cfc21787be38431924f29d66e46c83715c48",
@@ -102,12 +102,12 @@
     "/verax-web/assets/js/isMobile.min.js": "21a1301ac7f0c72032b471a80eb8125509b70961",
     "/verax-web/assets/js/service-worker.js": "ad446faee1849eec3742964446f7e8256c61250e",
     "/verax-web/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/verax-web/index.html": "187d4682804fc7c307746b46c3c0b00093bfd72a",
-    "/verax-web/main.dcfd11bb90ad7136b569.js": "e557f299f9f2d91ccd591f576e5a8c21198ccbff",
+    "/verax-web/index.html": "0a3f566a26d36324e4857a5f686ff5d4aefb2e05",
+    "/verax-web/main.f88dba3f84bfe77747f0.js": "e432b38139cd37717de98fe0742665c5c3061e72",
     "/verax-web/manifest.webmanifest": "a4a7c74c29b5ae65d3f888e5e5805a50157cf4e8",
     "/verax-web/polyfills.00096ed7d93ed26ee6df.js": "cfe7b0b53e96bff9ba384b4d497c08475a617d62",
     "/verax-web/runtime.7b63b9fd40098a2e8207.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "/verax-web/styles.3ff695c00d717f2d2a11.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    "/verax-web/styles.d3bf107e61ce096c6c9b.css": "1f6ff37bc93a8a66b957e632122da87bd1e51554"
   },
   "navigationUrls": [
     {
