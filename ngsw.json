@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1621096718389,
+  "timestamp": 1621097188173,
   "index": "/verax-web/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/verax-web/favicon.ico",
         "/verax-web/index.html",
-        "/verax-web/main.f88dba3f84bfe77747f0.js",
+        "/verax-web/main.1ced780ea6e8e8d36928.js",
         "/verax-web/manifest.webmanifest",
         "/verax-web/polyfills.00096ed7d93ed26ee6df.js",
         "/verax-web/runtime.7b63b9fd40098a2e8207.js",
@@ -102,8 +102,8 @@
     "/verax-web/assets/js/isMobile.min.js": "21a1301ac7f0c72032b471a80eb8125509b70961",
     "/verax-web/assets/js/service-worker.js": "ad446faee1849eec3742964446f7e8256c61250e",
     "/verax-web/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/verax-web/index.html": "0a3f566a26d36324e4857a5f686ff5d4aefb2e05",
-    "/verax-web/main.f88dba3f84bfe77747f0.js": "e432b38139cd37717de98fe0742665c5c3061e72",
+    "/verax-web/index.html": "b5f2c52ae24add16ac47082369a87d6d349d30a3",
+    "/verax-web/main.1ced780ea6e8e8d36928.js": "62851987c3781fc50ea5e562f9bfb77bdc350cd9",
     "/verax-web/manifest.webmanifest": "a4a7c74c29b5ae65d3f888e5e5805a50157cf4e8",
     "/verax-web/polyfills.00096ed7d93ed26ee6df.js": "cfe7b0b53e96bff9ba384b4d497c08475a617d62",
     "/verax-web/runtime.7b63b9fd40098a2e8207.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
