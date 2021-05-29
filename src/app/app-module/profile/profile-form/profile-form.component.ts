@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
-import { ProfileService } from '../profile/provider/profile.service';
-import { Profile } from '../profile/entity/profile';
-import { Router } from '@angular/router';
+import { ProfileService } from '../provider/profile.service';
+import { Observable } from 'rxjs';
+import { Profile } from '../entity/profile';
+import { map, take, tap } from 'rxjs/operators';
+import { MatDialog } from '@angular/material/dialog';
+import { NoticeDialogComponent } from '../../alert/notice-dialog/notice-dialog.component';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -14,12 +17,11 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 }
 
 @Component({
-  selector: 'app-start-page',
-  templateUrl: './start-page.component.html',
-  styleUrls: ['./start-page.component.scss']
+  selector: 'app-profile-form',
+  templateUrl: './profile-form.component.html',
+  styleUrls: ['./profile-form.component.scss']
 })
-export class StartPageComponent implements OnInit {
-
+export class ProfileFormComponent implements OnInit {
 
   publicNameFormControl = new FormControl('', [
     Validators.required,
@@ -35,33 +37,29 @@ export class StartPageComponent implements OnInit {
     Validators.pattern(/^([a-zA-Z0-9-_]+)+$/)
   ]);
 
+  idFormControl = new FormControl('', []);
+
   profileForm = new FormGroup({
     publicName: this.publicNameFormControl,
-    userName: this.userNameFormControl
+    userName: this.userNameFormControl,
+    id: this.idFormControl
   });
 
   matcher = new MyErrorStateMatcher();
 
-  constructor(private profileService: ProfileService, private router: Router) {
+  profile$: Observable<Profile> | undefined;
+
+  constructor(
+    private profileService: ProfileService) {
   }
 
   ngOnInit(): void {
+    this.profile$ = this.profileService.fetchMyProfile().pipe(tap(profile => this.profileForm.patchValue(profile)));
   }
 
   onSubmit(): void {
-    // [disabled]="!profileForm.valid"
-    console.warn(this.publicNameFormControl.errors);
-    console.warn(this.profileForm.value);
-    console.warn(this.profileForm);
-
-    if (this.profileForm.valid) {
-      this.profileService.save(
-        {
-          userName: this.profileForm.value.userName,
-          publicName: this.profileForm.value.publicName
-        } as Profile
-      );
-      this.router.navigateByUrl('/');
+    if (this.profileForm.valid && this.profile$) {
+      this.profileService.update(this.profileForm.value);
     }
   }
 }

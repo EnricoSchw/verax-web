@@ -1,0 +1,69 @@
+<mat-toolbar color="accent" class="app-nav">
+  <span class="nav-tool-items">
+    <button
+      type="button"
+      aria-label="Toggle sidenav"
+      mat-icon-button
+      (click)="sidenav.toggle()">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+  </span>
+  <span class="desktop">Coorax</span>
+</mat-toolbar>
+
+<mat-sidenav-container class="dashboard-container" color="primary" >
+  <!-- Sidenav -->
+  <mat-sidenav color="primary" #sidenav [mode]="isBiggerScreen() ? 'over' : 'side'" [(opened)]="opened" [fixedInViewport]="true"
+               [fixedTopGap]>
+    <div class="logo">
+       <img class="logo-img" src="./assets/img/sidenav.jpeg">
+    </div>
+    <mat-nav-list>
+      <a mat-list-item>
+        <mat-icon>dashboard</mat-icon>
+        Dashboard
+      </a>
+      <a mat-list-item>
+        <mat-icon>person</mat-icon>
+        User Profile
+      </a>
+      <a mat-list-item>
+        <mat-icon>content_paste</mat-icon>
+        Table List
+      </a>
+      <a mat-list-item>
+        <mat-icon>library_books</mat-icon>
+        Typography
+      </a>
+      <a mat-list-item>
+        <mat-icon>location_on</mat-icon>
+        Maps
+      </a>
+      <a mat-list-item>
+        <mat-icon>calendar_today</mat-icon>
+        Calendar
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Main content -->
+  <mat-sidenav-content>
+
+    <app-profile-page></app-profile-page>
+
+<!--    &lt;!&ndash; Angular material cards &ndash;&gt;-->
+<!--    <div class="productCards">-->
+<!--      <mat-grid-list cols="4" rowHeight="200px">-->
+<!--        <mat-grid-tile [colspan]="3" [rowspan]="1">1-->
+<!--        </mat-grid-tile>-->
+<!--        <mat-grid-tile [colspan]="1" [rowspan]="2">2-->
+<!--        </mat-grid-tile>-->
+<!--        <mat-grid-tile [colspan]="1" [rowspan]="1">3-->
+<!--        </mat-grid-tile>-->
+<!--        <mat-grid-tile [colspan]="2" [rowspan]="1">4-->
+<!--        </mat-grid-tile>-->
+<!--      </mat-grid-list>-->
+<!--    </div>-->
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

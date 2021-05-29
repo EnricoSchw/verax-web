@@ -3,7 +3,17 @@
 .mat-form-field-appearance-outline .mat-form-field-outline {
   color: mat-color($verax-web-primary);
 }
-
-.custom-tooltip {
-  color: $dark-green;
+#readonly.mat-form-field-appearance-outline .mat-form-field-outline {
+    color: mat-color($verax-web-accent) !important;
 }
+
+
+  input.readonly {
+    pointer-events:none;
+  }
+
+  .custom-tooltip {
+    color: $dark-green;
+  }
+
+

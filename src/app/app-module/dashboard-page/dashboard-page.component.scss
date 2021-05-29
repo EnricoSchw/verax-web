@@ -1,0 +1,90 @@
+.dashboard-container {
+  position: absolute;
+  top: 64px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 50px;
+}
+.mat-sidenav {
+  box-shadow: unset;
+  color: #fedbd0;
+  .mat-list-base .mat-list-item  {
+    color: #fedbd0;
+  }
+  .mat-icon {
+    color: #fedbd0;
+    margin-right: 10px;
+  }
+}
+
+.mat-sidenav-content {
+  padding: 20px;
+}
+
+.mat-drawer {
+  background-color: #1d4970;
+  color: #fedbd0;
+}
+
+.bordertop
+{
+  //background-image: url(../images/top_border.png);
+  background-repeat: repeat-x;
+  height: 100px;
+  width: 100%; /* may not be necessary */
+}
+
+.logo{
+  position:relative;
+  display:inline-block;
+  //background-image: linear-gradient(to bottom, #fedbd0, #1d4970 100%);
+  //background-image: -moz-linear-gradient( 180deg, rgb(252, 227, 138) 0%, rgb(243, 129, 129) 100%);
+  //background-image: -webkit-linear-gradient( 90deg, rgb(252, 227, 138) 0%, rgb(243, 129, 129) 100%);
+  //background-image: -ms-linear-gradient( 90deg, rgb(252, 227, 138) 0%, rgb(243, 129, 129) 100%);
+  // mix-blend-mode: overlay;
+  //background-color: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73));
+  //background-image: linear-gradient(to bottom, #fedbd0, #1d4970), url("../../../assets/img/sidenav.jpeg");
+  //width: 200px;
+  //height: 150px;
+  //background-size: cover;
+  //color: white;
+  //margin: 10px;
+}
+
+.logo:after {
+  content:'';
+  position:absolute;
+  left:0; top:0;
+  width:100%; height:100%;
+  display:inline-block;
+  //background: -moz-linear-gradient(top, rgba(0,47,75,0.5) 0%, rgba(220, 66, 37, 0.5) 100%); /* FF3.6+ */
+  //background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(220, 66, 37, 0.5)), color-stop(100%,rgba(0,47,75,0.5))); /* Chrome,Safari4+ */
+  //background: -webkit-linear-gradient(top, rgba(0,47,75,0.5) 0%,rgba(220, 66, 37, 0.5) 100%); /* Chrome10+,Safari5.1+ */
+  //background: -o-linear-gradient(top, rgba(0,47,75,0.5) 0%,rgba(220, 66, 37, 0.5) 100%); /* Opera 11.10+ */
+  //background: -ms-linear-gradient(top, rgba(0,47,75,0.5) 0%,rgba(220, 66, 37, 0.5) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgb(254, 219, 208, 0.2) 0%, rgb(29, 73, 112) 100%); /* W3C */
+  //background: linear-gradient(to bottom, #fedbd0 0%, #1d4970 100%);
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002f4b', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+
+.logo-img {
+  width: 200px;
+  height: 150px;
+  background-size: cover;
+  opacity: 1;
+  display: block;
+
+}
+
+@media only screen and (max-width: 599px) {
+  .dashboard-container {
+    top: 0px;
+    bottom: 56px;
+    padding-bottom: 100px;
+    background-color: transparent;
+  }
+  .desktop {
+    display: none;
+  }
+}
