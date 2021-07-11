@@ -1,5 +1,5 @@
 import Dexie from 'dexie';
-import { Profile } from '../entity/profile';
+import { Profile, ProfileType } from '../entity/profile';
 import { IndexDB } from '../../store/IndexDB';
 import { from, Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
@@ -14,9 +14,7 @@ export class ProfileStore extends Dexie {
 
   public constructor(public dialog: MatDialog) {
     super(IndexDB.DB_NAME);
-    this.version(1).stores({
-      profiles: '++id,userName,publicName'
-    });
+    this.version(1).stores({profiles: '++id,userName,publicName'});
     this.profiles = this.table('profiles');
   }
 
@@ -24,10 +22,7 @@ export class ProfileStore extends Dexie {
     this.transaction('rw', this.profiles, async () => {
       // Make sure we have something in DB:
       if ((await this.profiles.where({userName: profile.userName}).count()) === 0) {
-        const id = await this.profiles.add(
-          {userName: profile.userName, publicName: profile.publicName}
-        );
-        console.log(`Added profile with id ${id}`);
+        const id = await this.profiles.add({...profile});
       }
     }).catch(e => {
       console.log(e.stack || e);
@@ -39,10 +34,7 @@ export class ProfileStore extends Dexie {
     this.transaction('rw', this.profiles, async () => {
       // Make sure we have something in DB:
       if ((await this.profiles.where({id: profile.id}).count()) !== 0) {
-        const id = await this.profiles.put(
-          {id: profile.id, userName: profile.userName, publicName: profile.publicName},
-          profile.id
-        );
+        const id = await this.profiles.put({...profile}, profile.id);
         this.dialog.open(NoticeDialogComponent, {data: {type: 'success', msg: 'Updated profile!'}});
       }
     }).catch(e => {
@@ -54,8 +46,22 @@ export class ProfileStore extends Dexie {
     return from(this.profiles.count().then((count) => count === 0));
   }
 
+  hasCurrent(): Observable<boolean> {
+    const transaction = this.transaction('r', this.profiles, async () => {
+      return await this.profiles.where({type: ProfileType.CURRENT}).count() !== 0;
+    });
+    return from(transaction);
+  }
+
   public fetch(): Observable<Profile> {
     const profilePromise = this.profiles.toArray().then((profiles) => profiles[0]);
     return from(profilePromise);
+  }
+
+  public fetchCurrent(): Observable<Profile | undefined> {
+    const transaction = this.transaction('r', this.profiles, async () => {
+      return await this.profiles.where({type: ProfileType.CURRENT}).first();
+    });
+    return from(transaction);
   }
 }

@@ -30,6 +30,12 @@
   }
 }
 
+/** Dashboard ----------------------------------------------------------*/
+.dashboard-content-container {
+  margin: 0px;
+  margin-top: 20px;
+}
+
 /** Bar ----------------------------------------------------------------*/
 .mat-toolbar.app-nav {
   background-color: #fff;
@@ -62,6 +68,12 @@
   }
   .app-content-two-section {
     width: 100%;
+  }
+
+  /** Dashboard ----------------------------------------------------------*/
+  .dashboard-content-container {
+    margin: 0px;
+    margin-top: 20px;
   }
 
   /** Bar ----------------------------------------------------------------*/

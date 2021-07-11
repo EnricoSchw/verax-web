@@ -7,13 +7,10 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldDefaultOptions } from '@ang
 import { ReactiveFormsModule } from '@angular/forms';
 import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
 import { ProfilePageComponent } from './dashboard-page/profile-page/profile-page.component';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSelectModule } from '@angular/material/select';
-import { MatRadioModule } from '@angular/material/radio';
-import { MatCardModule } from '@angular/material/card';
 import { ProfileModule } from './profile/profile.module';
-import { AlertModule } from './alert/alert.module';
+import { OverviewPageComponent } from './dashboard-page/overview-page/overview-page.component';
+import { PageNotFoundPageComponent } from './page-not-found-page/page-not-found-page.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 const appearance: MatFormFieldDefaultOptions = {
   appearance: 'outline'
@@ -23,14 +20,17 @@ const appearance: MatFormFieldDefaultOptions = {
   declarations: [
     StartPageComponent,
     DashboardPageComponent,
-    ProfilePageComponent
+    ProfilePageComponent,
+    OverviewPageComponent,
+    PageNotFoundPageComponent
   ],
   imports: [
     CommonModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
     ReactiveFormsModule,
-    ProfileModule
+    ProfileModule,
+    AppRoutingModule
   ],
   providers: [
     {

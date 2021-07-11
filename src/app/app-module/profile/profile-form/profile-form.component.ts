@@ -4,9 +4,7 @@ import { ErrorStateMatcher } from '@angular/material/core';
 import { ProfileService } from '../provider/profile.service';
 import { Observable } from 'rxjs';
 import { Profile } from '../entity/profile';
-import { map, take, tap } from 'rxjs/operators';
-import { MatDialog } from '@angular/material/dialog';
-import { NoticeDialogComponent } from '../../alert/notice-dialog/notice-dialog.component';
+import { tap, filter, map } from 'rxjs/operators';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -54,7 +52,10 @@ export class ProfileFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.profile$ = this.profileService.fetchMyProfile().pipe(tap(profile => this.profileForm.patchValue(profile)));
+    this.profile$ = this.profileService.fetchMyProfile().pipe(
+      map(profile => profile === undefined ? {} as Profile : profile),
+      tap(profile => this.profileForm.patchValue(profile))
+    );
   }
 
   onSubmit(): void {

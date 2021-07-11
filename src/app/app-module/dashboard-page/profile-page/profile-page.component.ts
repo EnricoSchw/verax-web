@@ -7,14 +7,7 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./profile-page.component.scss']
 })
 export class ProfilePageComponent {
-  addressForm = this.fb.group({
-    publicName: [null, Validators.required],
-    userName: [null, Validators.required],
-  });
 
   constructor(private fb: FormBuilder) {}
 
-  onSubmit(): void {
-    alert('Thanks!');
-  }
 }

@@ -21,10 +21,10 @@ export class ProfileService {
   }
 
   public hasProfile(): Observable<boolean> {
-    return this.db.isEmpty().pipe(map(isEmpty => !isEmpty));
+    return this.db.hasCurrent();
   }
 
-  public fetchMyProfile(): Observable<Profile> {
-    return this.db.fetch();
+  public fetchMyProfile(): Observable<Profile | undefined> {
+    return this.db.fetchCurrent();
   }
 }
