@@ -1,0 +1,46 @@
+<form class="" [formGroup]="callForm" (ngSubmit)="onSubmit()">
+  <mat-card class="">
+    <mat-card-header>
+      <mat-card-title>Video Call</mat-card-title>
+      <mat-card-subtitle>Put a room name and make a simple call</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image class="mat-card-image-line" src="./assets/img/line.jpeg" alt="line">
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field>
+            <mat-label>Room Name</mat-label>
+            <input matInput placeholder="Please add a room name..." formControlName="room"
+                   [errorStateMatcher]="matcher" value="callEntity">
+            <mat-error
+              *ngIf="roomFormControl.hasError('minlength') && !roomFormControl.hasError('pattern') && !roomFormControl.hasError('required')">
+              Must have min 5 characters.
+            </mat-error>
+            <mat-error
+              *ngIf="roomFormControl.hasError('maxlength') && !roomFormControl.hasError('pattern') && !roomFormControl.hasError('required')">
+              Maximal 25 characters allowed.
+            </mat-error>
+            <mat-error *ngIf="roomFormControl.hasError('pattern') && !roomFormControl.hasError('required')">
+              Only letters, space and numbers.
+            </mat-error>
+
+            <mat-error *ngIf="roomFormControl.hasError('required')">
+              Room Name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+
+        </div>
+      </div>
+    </mat-card-content>
+
+    <mat-card-actions align="end">
+      <button mat-button (click)="randomString(15)"  >Generate</button>
+
+      <button mat-raised-button type="submit" color="primary">Start Call</button>
+
+    </mat-card-actions>
+  </mat-card>
+
+
+</form>
+
