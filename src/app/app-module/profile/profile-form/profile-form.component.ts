@@ -36,11 +36,13 @@ export class ProfileFormComponent implements OnInit {
   ]);
 
   idFormControl = new FormControl('', []);
+  typeFormControl = new FormControl('', []);
 
   profileForm = new FormGroup({
     publicName: this.publicNameFormControl,
     userName: this.userNameFormControl,
-    id: this.idFormControl
+    id: this.idFormControl,
+    type: this.typeFormControl
   });
 
   matcher = new MyErrorStateMatcher();

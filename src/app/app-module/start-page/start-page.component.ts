@@ -49,18 +49,13 @@ export class StartPageComponent implements OnInit {
   }
 
   onSubmit(): void {
-    // [disabled]="!profileForm.valid"
-    console.warn(this.publicNameFormControl.errors);
-    console.warn(this.profileForm.value);
-    console.warn(this.profileForm);
 
     if (this.profileForm.valid) {
-      this.profileService.save(
-        {
-          userName: this.profileForm.value.userName,
-          publicName: this.profileForm.value.publicName
-        } as Profile
+      const profile = Profile.createCurrentProfile(
+        this.profileForm.value.userName,
+        this.profileForm.value.publicName
       );
+      this.profileService.save(profile);
       this.router.navigateByUrl('/');
     }
   }

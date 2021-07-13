@@ -11,6 +11,8 @@ import { ProfileModule } from './profile/profile.module';
 import { OverviewPageComponent } from './dashboard-page/overview-page/overview-page.component';
 import { PageNotFoundPageComponent } from './page-not-found-page/page-not-found-page.component';
 import { AppRoutingModule } from '../app-routing.module';
+import { CallModule } from './call/call.module';
+import { ContactsModule } from './contacts/contacts.module';
 
 const appearance: MatFormFieldDefaultOptions = {
   appearance: 'outline'
@@ -30,6 +32,8 @@ const appearance: MatFormFieldDefaultOptions = {
     AngularMaterialModule,
     ReactiveFormsModule,
     ProfileModule,
+    ContactsModule,
+    CallModule,
     AppRoutingModule
   ],
   providers: [

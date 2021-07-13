@@ -14,7 +14,7 @@ export class ProfileStore extends Dexie {
 
   public constructor(public dialog: MatDialog) {
     super(IndexDB.DB_NAME);
-    this.version(1).stores({profiles: '++id,userName,publicName'});
+    this.version(1).stores({profiles: '++id,userName,publicName,type'});
     this.profiles = this.table('profiles');
   }
 

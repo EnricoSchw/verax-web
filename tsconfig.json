@@ -19,7 +19,11 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "verax-sdk": ["node_modules/verax-sdk/src"],
+      "verax-sdk/*": ["node_modules/verax-sdk/src/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

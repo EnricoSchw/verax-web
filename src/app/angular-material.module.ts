@@ -13,6 +13,9 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonToggle } from '@angular/material/button-toggle/button-toggle';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatTableModule } from '@angular/material/table';
 
 
 const materialModules = [
@@ -28,7 +31,9 @@ const materialModules = [
   MatSelectModule,
   MatRadioModule,
   MatCardModule,
-  MatDialogModule
+  MatDialogModule,
+  MatButtonToggleModule,
+  MatTableModule
 ];
 
 @NgModule({

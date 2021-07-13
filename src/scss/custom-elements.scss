@@ -1,10 +1,11 @@
 /** Form --------------------------------------------------*/
+@use '~@angular/material' as mat;
 
 .mat-form-field-appearance-outline .mat-form-field-outline {
-  color: mat-color($verax-web-primary);
+  color: mat.get-color-from-palette($verax-web-primary);
 }
 #readonly.mat-form-field-appearance-outline .mat-form-field-outline {
-    color: mat-color($verax-web-accent) !important;
+    color: mat.get-color-from-palette($verax-web-accent) !important;
 }
 
 
@@ -17,3 +18,7 @@
   }
 
 
+.mat-card-image-line {
+  height: 5px !important;
+  opacity: 0.8;
+}

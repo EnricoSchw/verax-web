@@ -36,7 +36,8 @@
             "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "preserveSymlinks": true
           },
           "configurations": {
             "production": {
@@ -134,11 +135,6 @@
           }
         }
       }
-    }
-  },
-  "schematics": {
-    "@schematics/angular:component": {
-      "styleext": "scss"
     }
   },
   "defaultProject": "verax-web"
