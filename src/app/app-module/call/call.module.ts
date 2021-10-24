@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SimpleCallFormComponent } from './simple-call-form/simple-call-form.component';
+import { SimpleCallFormComponent } from './components/simple-call-form/simple-call-form.component';
 import { AngularMaterialModule } from '../../angular-material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AlertModule } from '../alert/alert.module';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldDefaultOptions } from '@angular/material/form-field';
+import { CallComponent } from './components/call/call.component';
+import { DeviceSelectionDialogComponent } from './components/device-selection-dialog/device-selection-dialog.component';
 
 const appearance: MatFormFieldDefaultOptions = {
   appearance: 'outline'
@@ -12,10 +14,13 @@ const appearance: MatFormFieldDefaultOptions = {
 
 @NgModule({
   declarations: [
-    SimpleCallFormComponent
+    SimpleCallFormComponent,
+    CallComponent,
+    DeviceSelectionDialogComponent
   ],
   exports: [
-    SimpleCallFormComponent
+    SimpleCallFormComponent,
+    CallComponent
   ],
   imports: [
     CommonModule,

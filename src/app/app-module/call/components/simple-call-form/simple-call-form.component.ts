@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { CallEntity } from '../entity/CallEntity';
+import { CallEntity } from '../../entity/CallEntity';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { FormErrorStateMatcher } from '../../utils/form/form-error-state-matcher';
+import { FormErrorStateMatcher } from '../../../utils/form/form-error-state-matcher';
 import { Router } from '@angular/router';
 
 @Component({
@@ -35,7 +35,7 @@ export class SimpleCallFormComponent implements OnInit {
 
   onSubmit(): void {
     if (this.callForm.valid) {
-      this.router.navigateByUrl('/');
+      this.router.navigateByUrl('/call');
     }
   }
 

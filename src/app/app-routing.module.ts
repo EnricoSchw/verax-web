@@ -7,6 +7,8 @@ import { NoProfileGuard } from './app-module/guards/no-profile.guard';
 import { PageNotFoundPageComponent } from './app-module/page-not-found-page/page-not-found-page.component';
 import { ProfilePageComponent } from './app-module/dashboard-page/profile-page/profile-page.component';
 import { OverviewPageComponent } from './app-module/dashboard-page/overview-page/overview-page.component';
+import { CallGuard } from './app-module/guards/call.guard';
+import { CallComponent } from './app-module/call/components/call/call.component';
 
 const routes: Routes = [
   {
@@ -17,6 +19,7 @@ const routes: Routes = [
     ]
   },
   {path: 'start', component: StartPageComponent, canActivate: [NoProfileGuard]},
+  {path: 'call', component: CallComponent, canActivate: [CallGuard]},
   {path: '**', component: PageNotFoundPageComponent}
 ];
 

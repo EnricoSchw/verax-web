@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { Verax } from 'verax-sdk';
-
 
 @Component({
   selector: 'app-root',
@@ -8,13 +6,7 @@ import { Verax } from 'verax-sdk';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'verax-web';
-
-  x = new Verax();
-
   constructor() {
-    this.x.init('');
+
   }
-
-
 }
